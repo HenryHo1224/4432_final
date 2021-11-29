@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <title>shop</title>
+        <link rel="stylesheet" href="/4432_final/css/regester_page.css">
+        <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
+     </head>
+    <body >
+        <div class="header">
+            <img src="/4432_final/logo.png" id="logo">
+            <input type="text" placeholder="Search.." id="search">
+            <h1 id="name">This is a good good shop</h1>
+            <a href=login_page.html id="login">log in</a>
+            <div id="subtitle">
+                <a href=shop_interface_male.html id="male">male</a>
+                <a href=shop_interface_female.html id="female">female</a>
+                <a href=shop_interface_children.html id="children">children</a>
+            </div>
+        </div>
+        <p id="border_line"></p>
+        <div class="body">
+            <div id="input_form">
+                <form action="/4432_final/php/add_product.php" method="post" name="product_form"  enctype="multipart/form-data">
+                    <div id='row'><p>product name:</p> <input type="text" name="product_name" id="product_name" required></div>
+                    <div id='row'><p>price:</p> <input type="text" name="product_price" id="product_price" required></div>
+                    <div id='row'><p>image: </p> <input type="file" name="product_image" id="image"></div>
+                    <div id='row'><p>category: </p> <input list="product_category_d" name="product_category" id="product_category" required>
+                        <datalist id="product_category_d">
+                            <option value="male"></option>
+                            <option value="female"></option>
+                            <option value="children"></option>
+                        </datalist></div>
+                    <div id='row'><p>stock: </p> <input type="number" name="product_stock" id="product_stock" required></div> 
+                        
+                    <input type="submit" value="add product" id="regester_button">
+                </form>
+            </div>
+    </body>
+</html>
