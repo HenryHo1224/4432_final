@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head onload="">
-        <title>login successful</title>
+    <head >
+        <title>shop</title>
 
-        <script type="text/javascript" src="/4432_final/js/shop_interface_male.js"></script>
-        
+        <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
+        <link rel="stylesheet" href="/4432_final/css/regester_page.css">
+        <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
     </head>
     <body >
         <div class="header">
-            <input type="button" id="logout" value="logout" onclick="test()">
+            <img src="/4432_final/logo.png" id="logo">
+            <input type="text" placeholder="Search.." id="search">
+            <h1 id="name">This is a good good shop</h1>
+            <div id="login_area">
+                <a href=login_page.html id="login">log in</a>
+            </div>
+            <div id="subtitle">
+                <a class="header_subtitle" href=shop_interface_male.html id="male">male</a>
+                <a class="header_subtitle" href=shop_interface_female.html id="female">female</a>
+                <a class="header_subtitle" href=shop_interface_children.html id="children">children</a>
+            </div>
         </div>
+        <p id="border_line"></p>
+        <button onclick="logout()">logout</button>
         
-        <form action="/4432_final/php/get_male_product.php" method="post">
-            <input type="submit" value="regester" name="submit_b">
-        </form>
-
     </body>
 </html>

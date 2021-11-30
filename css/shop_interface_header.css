@@ -30,7 +30,7 @@ html,body{
     height: 40%;
 }
 
-#login{
+#login_area{
     display: flex;
     grid-column-start:2;
     grid-column-end:2;
@@ -96,12 +96,16 @@ html,body{
    
 }
 
-a{
+.header_subtitle{
     font-size: large;
     padding-left:7%;
     padding-right:7%;
+    
+}
+
+a{
+    text-decoration: none;
     color:gray;
-    text-size-adjust: 12px;
 }
 
 #border_line{

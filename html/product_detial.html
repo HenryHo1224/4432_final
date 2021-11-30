@@ -2,10 +2,13 @@
 <html>
     <head >
         <title>shop</title>
-        <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
+        
         <link rel="stylesheet" href="/4432_final/css/regester_page.css">
-        <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
-     </head>
+        <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
+        <script type="text/javascript" src="/4432_final/js/product_detial.js"></script>
+    </head>
     <body >
         <div class="header">
             <img src="/4432_final/logo.png" id="logo">
@@ -21,8 +24,19 @@
             </div>
         </div>
         <p id="border_line"></p>
+
         <div class="body">
-            <button onclick="logout()">logout</button>
+            <div id="detial_area">
+                <img id="detial_image" src="">
+                <h2 id ="detial_name" ></h2>
+                <h2 id ="detial_price"></h2>
+                <h2 id ="detial_stock"></h2>
+                <input type="number" id="number_to_buy"/>
+           
+            </div>
         </div>
+        
+    
+
     </body>
 </html>
