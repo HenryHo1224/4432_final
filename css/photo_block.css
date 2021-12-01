@@ -3,10 +3,10 @@
     border: solid black 6px;
     list-style-type: none;
     display:grid;
-    height: 75vh;
-    margin:0.5% 0.25% 0;
+    height: 70vh;
+    margin:0 2% 3% 0;
     padding:0;
-    width:32.5%;
+    width:30%;
     
     grid-template-columns: 100%;
     grid-template-rows:81% 9% 1% 9%;

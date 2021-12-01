@@ -28,7 +28,7 @@ window.onload = function() {
   }else if(getCookie("user")=="admin"){
     document.getElementById("login_area").innerHTML=`<a href=admin_interface.html id="login">admin</a>`;
   }else {
-    console.log(getCookie("user"))
+    document.getElementById("login_area").innerHTML=`<a href=user_interface.html id="login">${getCookie("user")}</a>`;
   }
 }
 
