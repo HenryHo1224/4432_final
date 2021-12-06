@@ -3,11 +3,11 @@
     <head >
         <title>shop</title>
         <link rel="stylesheet" href="/4432_final/css/shop_interface_body.css">
-        <link rel="stylesheet" href="/4432_final/css/product_detial.css">
+        <link rel="stylesheet" href="/4432_final/css/user_interface.css">
         <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
-        <script type="text/javascript" src="/4432_final/js/product_detial.js"></script>
+        <script type="text/javascript" src="/4432_final/js/user_interface.js"></script>
     </head>
     <body >
         <div class="header">
@@ -27,7 +27,28 @@
         <p id="border_line"></p>
 
         <div class="body">
-           <p>user interface</p>
+            <div id="user_data_area">
+                <div id="image_box" class="detial_box">
+                    <img id="user_image" src="">
+                </div>
+                <div id="user_name_box" class="detial_box">
+                    <h2 id="product_element_title">name:</h2><h2 id ="user_name" ></h2>
+                </div>
+                <div id="user_nickname_box" class="detial_box">
+                    <h2 id="product_element_title">nickname:</h2><h2 id ="user_nickname"></h2>
+                </div>
+                <div id="user_email_box" class="detial_box">
+                    <h2 id="product_element_title">email:</h2><h2 id ="user_email"></h2>
+                </div> 
+                <div id="user_gender_box" class="detial_box">
+                    <h2 id="product_element_title">gender:</h2><h2 id ="user_gender" ></h2>
+                </div>
+                <div id="user_birthday_box" class="detial_box">
+                    <h2 id="product_element_title">birthday:</h2><h2 id ="user_birthday" ></h2>
+                </div>
+                <input type="submit" value="edit" onclick="window.location='/4432_final/html/user_edit.html'">
+                <input type="button" value="logout" onclick="logout()">
+            </div>
         </div>
         
     

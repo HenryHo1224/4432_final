@@ -6,7 +6,7 @@ $password = "";
 $database = "final_report";
 
 
-$product_picked = $_COOKIE[ "product_picked"];
+$product_picked = $_COOKIE["product_picked"];
 $conn = new mysqli($servername, $username, $password, $database);
 
 if ($conn->connect_error) {

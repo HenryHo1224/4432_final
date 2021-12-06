@@ -23,13 +23,22 @@
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
   }
-  
-  $db_info=$conn->query("INSERT INTO `people`(`login_id`, 
-  `password`, `nickname`, `email`, `image`, `gender`, `birthday`, `role`) 
-  VALUES ('$login_id','$login_password','  $login_password','$email','$file_content','$gender','$birthday','customer')");
-  
-  $conn -> close();
-  exit;
+
+
+  $db_info=$conn->query("SELECT * FROM `people` WHERE `login_id` = '".$login_id."' or `email`= '".$email."'");
+
+  if (mysqli_num_rows($db_info) != 0) {
+    header("Location: http://localhost/4432_final/html/regester_fail.html");
+    $conn -> close();
+    exit;
+  }else{
+    $regester=$conn->query("INSERT INTO `people`(`login_id`, 
+    `password`, `nickname`, `email`, `image`, `gender`, `birthday`, `role`) 
+    VALUES ('$login_id','$login_password','  $login_password','$email','$file_content','$gender','$birthday','customer')");
+    $conn -> close();
+    header("Location: http://localhost/4432_final/html/shop_interface_male.html");
+    exit;
+  }
 
   
 ?>

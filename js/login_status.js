@@ -1,4 +1,3 @@
-
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -19,7 +18,8 @@ function logout(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("get","/4432_final/php/logout.php");
   xmlhttp.send();
-  location.reload();
+  window.location.href = '/4432_final/html/login_page.html'
+  window.localStorage.clear()
 }
 
 window.onload = function() {

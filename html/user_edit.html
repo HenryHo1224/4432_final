@@ -2,12 +2,8 @@
 <html>
     <head >
         <title>shop</title>
-        <meta http-equiv="refresh" content="2;url=login_page.html" />
-        <link rel="stylesheet" href="/4432_final/css/product_preview_body.css">
+        <link rel="stylesheet" href="/4432_final/css/regester_page.css">
         <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
-        <link rel="stylesheet" href="/4432_final/css/photo_block.css">
-        <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
-        <script type="text/javascript" src="/4432_final/js/photo_preview.js"></script>
     </head>
     <body >
         <div class="header">
@@ -26,9 +22,16 @@
         </div>
         <p id="border_line"></p>
         <div class="body">
-            <p>login fail</p>
+            <div id="input_form">
+            <form action="/4432_final/php/edit.php" method="post" name="regester_form"  id='regester_form' enctype="multipart/form-data" >
+                <div id='row'><p>new nickname:</p> <input type="text" name="nickname" id="nickname" ></div>
+                <div id='row'><p>new email:</p> <input type="email" name="email" id="email" ></div>
+                <div id='row'><p>new image: </p> <input type="file" name="image" id="image"></div>
+              <input type="submit" value="edit" id="submit" >
+            </form>
         </div>
-    
+        </div>
+
 
     </body>
 </html>

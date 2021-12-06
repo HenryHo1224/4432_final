@@ -45,6 +45,8 @@ function add_to_cart(){
         shopping_cart_data.push(products);
         window.localStorage.setItem("shopping_cart",JSON.stringify(shopping_cart_data))
     }
+    window.location.href="/4432_final/html/shop_interface_male.html"
+    console.log(window.localStorage.getItem("shopping_cart"))
 }
 
 

@@ -16,7 +16,7 @@
 
   if (strcmp($button_path,"login")==0){
 
-  $db_info=$conn->query("SELECT * FROM `people` WHERE login_id = '".$login_id."' AND password = '".$login_password."'");
+  $db_info=$conn->query("SELECT * FROM `people` WHERE `login_id` = '".$login_id."' AND `password` = '".$login_password."'");
     print(mysqli_num_rows($db_info));
     if (mysqli_num_rows($db_info) == 1) {
       $content = $db_info -> fetch_assoc();
@@ -31,10 +31,14 @@
       header("Location: /4432_final/html/login_fail.html");
       exit;
     }
-  }else{
+  }else if(strcmp($button_path,"regester")==0){
     $conn -> close();   
     header("Location: /4432_final/html/regester.html");
     exit;
+    }else if((strcmp($button_path,"forget password")==0)){
+      $conn -> close();   
+      header("Location: /4432_final/html/forget_password.html");
+      exit;
     }
   
 
