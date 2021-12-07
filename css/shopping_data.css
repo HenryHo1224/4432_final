@@ -1,0 +1,20 @@
+#shop_data_area{
+    display: flex;
+
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+table{
+    
+    border-spacing:0
+}
+
+td{
+    border-style: solid;
+    border-width:3px;
+    padding:0;
+}
+

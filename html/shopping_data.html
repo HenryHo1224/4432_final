@@ -3,10 +3,11 @@
     <head >
         <title>shop</title>
         <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
-        <script type="text/javascript" src="/4432_final/js/admin_interface.js"></script>
-        <link rel="stylesheet" href="/4432_final/css/regester_page.css">
+        <script type="text/javascript" src="/4432_final/js/shopping_data.js"></script>
+        <link rel="stylesheet" href="/4432_final/css/shopping_data.css">
         <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
-     </head>
+     
+    </head>
     <body >
         <div class="header">
             <img src="/4432_final/logo.png" id="logo">
@@ -24,9 +25,13 @@
         </div>
         <p id="border_line"></p>
         <div class="body">
-            <input type="button" onclick="logout()" value="logout">
-            <input type="button" onclick="add_product()" value="add product">
-            <input type="button" onclick="shopping_data()" value="shopping data">
+            <div id="shop_data_area">
+                <table id="table">
+                    
+                </table>
+            </div>
+            <input type="button" onclick="by_nickname()">
+            <input type="button" onclick="by_id()">
         </div>
     </body>
 </html>
