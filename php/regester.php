@@ -4,10 +4,9 @@
   $password = "";
   $database = "final_report";
   
-
-  $button_path=$_POST['login_id'];
-  $login_id = $_POST['login_password'];
-  $login_password = $_POST['nickname'];
+  $login_id = $_POST['login_id'];
+  $login_password = $_POST['login_password'];
+  $nickname = $_POST['nickname'];
   $email=$_POST['email'];
 
   $gender = $_POST['gender'];
@@ -34,9 +33,9 @@
   }else{
     $regester=$conn->query("INSERT INTO `people`(`login_id`, 
     `password`, `nickname`, `email`, `image`, `gender`, `birthday`, `role`) 
-    VALUES ('$login_id','$login_password','  $login_password','$email','$file_content','$gender','$birthday','customer')");
+    VALUES ('$login_id','$login_password','$nickname','$email','$file_content','$gender','$birthday','customer')");
     $conn -> close();
-    header("Location: http://localhost/4432_final/html/shop_interface_male.html");
+    header("Location: http://localhost/4432_final/html/login_page.html");
     exit;
   }
 

@@ -1,6 +1,7 @@
+
 var xmlhttp = new XMLHttpRequest();
 var photo_data;
-xmlhttp.open("GET","/4432_final/php/get_female_product.php")
+xmlhttp.open("GET","/4432_final/php/check_product.php")
 xmlhttp.send();
 
 xmlhttp.onload = function() {
@@ -17,7 +18,7 @@ xmlhttp.onload = function() {
                 <img id="product_image" src="data:image/jpg;base64,${photo_data[i].image}">
                 <h2 id ='product_name' class=product_${i}>${photo_data[i].name}</h2>
                 <h2 id="border_line_box"></h2>
-                <h2 id ='product_price'>$${photo_data[i].price}</h2>
+                <h2 id ='product_price'>${photo_data[i].stock}</h2>
             </div>
 
             `
@@ -34,9 +35,9 @@ xmlhttp.onload = function() {
 
 function redirect_to_product_page(item){
     var number = $(item).attr("class")
-    setCookie("product_picked" ,$(`h2.product_${number}`).text())
-    window.location.replace("/4432_final/html/product_detial.html");
-    console.log(getCookie("product_picked"))
+    setCookie("updated_picked" ,$(`h2.product_${number}`).text())
+    window.location.replace("/4432_final/html/updated_product.html");
+    console.log(getCookie("updated_picked"))
 }
 
 
@@ -46,4 +47,3 @@ function setCookie(cname, cvalue) {
   let expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-

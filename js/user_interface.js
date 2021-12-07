@@ -19,11 +19,9 @@ xmlhttp.onload = function() {
       $("#user_name").text(user_data[0].login_id)
       $("#user_nickname").text(user_data[0].nickname)
       $("#user_email").text(user_data[0].email)
-      if(user_data[0].user_gender=="0"){
-        $("#user_gender").text("male")
-      }else{
-        $("#user_gender").text("female")
-      }
+     
+      $("#user_gender").text(user_data[0].gender)
+     
       $("#user_birthday").text(user_data[0].birthday)
       
   }

@@ -6,7 +6,7 @@
     $conn = new mysqli($servername, $username, $password, $database);
 
    
-    $result=$conn->query("SELECT * FROM `order` ORDER by `nick_name`");
+    $result=$conn->query("SELECT * FROM `order` ORDER by `nick_name` LIMIT 30");
     while($row = $result -> fetch_assoc()){
         
         $data_array[] = $row;

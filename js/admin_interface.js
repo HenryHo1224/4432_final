@@ -5,3 +5,7 @@ function add_product(){
 function shopping_data(){
     window.location.href = '/4432_final/html/shopping_data.html';
 }
+
+function check_product(){
+    window.location.href = '/4432_final/html/check_product.html';
+}

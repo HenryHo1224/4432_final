@@ -102,7 +102,15 @@ h2{
     grid-row-end: 5;
 }
 
-#row{
-    display: flex;
-    justify-self: center;
+#row,#submit{
+    display:flex;
+    justify-content: space-around;
+}
+
+input{
+    align-self: center;
+}
+
+#image{
+    width:60%;
 }

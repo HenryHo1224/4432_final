@@ -28,32 +28,40 @@ xmlhttp_get.onerror = function() {
 
 
 function add_to_cart(){
-    
-    if($("#number_to_buy").val() < 0){
-        alert ('invalid input');
-    }else if($("#number_to_buy").val()>parseInt($('#detial_stock').text())){
-        alert ('invalid input');
-    }else if ($("#number_to_buy").val()==""){
-        alert ('invalid input');
+
+    if(getCookie("user")==""){
+        window.location.href="/4432_final/html/login_page.html"
     }else{
-        products=[{'productId' : $("#detial_name").text() 
-        ,"number_to_buy"  : $("#number_to_buy").val()
-        ,"img"  : $("#detial_image").prop('src') ,
-        "price" : $("#detial_price").text()
-        }];
+        if($("#number_to_buy").val() <= 0){
+            alert ('invalid input');
+        }else if($("#number_to_buy").val()>parseInt($('#detial_stock').text())){
+            alert ('invalid input');
+        }else if ($("#number_to_buy").val()==""){
+            alert ('invalid input');
+        }else{
+            products=[{'productId' : $("#detial_name").text() 
+            ,"number_to_buy"  : $("#number_to_buy").val()
+            ,"img"  : $("#detial_image").prop('src') ,
+            "price" : $("#detial_price").text()
+            }];
+
+            if(window.localStorage.getItem("shopping_cart")===null){
+                shopping_cart_data.push(products)
+                window.localStorage.setItem("shopping_cart",JSON.stringify(products))
+                
+            }else{
+                shopping_cart_data = JSON.parse(window.localStorage.getItem("shopping_cart"))
+                shopping_cart_data.push(products[0])
+                window.localStorage.setItem("shopping_cart",JSON.stringify(shopping_cart_data))
+                
+            }
+            window.location.href="/4432_final/html/shop_interface_male.html"
+        }
+        
+      
     }
     
-    if(window.localStorage.getItem("shopping_cart")===null){
-        shopping_cart_data.push(products)
-        window.localStorage.setItem("shopping_cart",JSON.stringify(products))
-        
-    }else{
-        shopping_cart_data = JSON.parse(window.localStorage.getItem("shopping_cart"))
-        shopping_cart_data.push(products[0])
-        window.localStorage.setItem("shopping_cart",JSON.stringify(shopping_cart_data))
-        
-    }
-    window.location.href="/4432_final/html/shop_interface_male.html"
+    
     console.log(window.localStorage.getItem("shopping_cart"))
 }
 

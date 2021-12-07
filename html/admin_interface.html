@@ -4,7 +4,7 @@
         <title>shop</title>
         <script type="text/javascript" src="/4432_final/js/login_status.js"></script>
         <script type="text/javascript" src="/4432_final/js/admin_interface.js"></script>
-        <link rel="stylesheet" href="/4432_final/css/regester_page.css">
+        <link rel="stylesheet" href="/4432_final/css/admin_interface.css">
         <link rel="stylesheet" href="/4432_final/css/shop_interface_header.css">
      </head>
     <body >
@@ -19,14 +19,16 @@
                 <a class="header_subtitle" href=shop_interface_male.html id="male">male</a>
                 <a class="header_subtitle" href=shop_interface_female.html id="female">female</a>
                 <a class="header_subtitle" href=shop_interface_children.html id="children">children</a>
-                <a class="header_subtitle" href=shopping_cart.html id="children">shopping card</a>
-            </div>
+                <a class="header_subtitle" href=shopping_cart.html id="children">shopping cart</a></div>
         </div>
         <p id="border_line"></p>
         <div class="body">
-            <input type="button" onclick="logout()" value="logout">
-            <input type="button" onclick="add_product()" value="add product">
-            <input type="button" onclick="shopping_data()" value="shopping data">
+            <div id=button_area>
+                <input type="button" onclick="logout()" value="logout">
+                <input type="button" onclick="add_product()" value="add product">
+                <input type="button" onclick="check_product()" value="check product">
+                <input type="button" onclick="shopping_data()" value="shopping data">
+            </div>
         </div>
     </body>
 </html>

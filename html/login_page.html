@@ -18,8 +18,7 @@
                 <a class="header_subtitle" href=shop_interface_male.html id="male">male</a>
                 <a class="header_subtitle" href=shop_interface_female.html id="female">female</a>
                 <a class="header_subtitle" href=shop_interface_children.html id="children">children</a>
-                <a class="header_subtitle" href=shopping_cart.html id="children">shopping card</a>
-            </div>
+                <a class="header_subtitle" href=shopping_cart.html id="children">shopping cart</a>  </div>
         </div>
         </div>
         <p id="border_line"></p>
@@ -28,7 +27,8 @@
             <div id="input_form">
                 <form action="/4432_final/php/login.php" method="post" name="regester_form"  id='regester_form' >
                     <div id='row'><p>login ID:</p> <input type="text" name="login_id" id="login_id" ></div>
-                    <div id='row'><p>password:</p> <input type="text" name="login_password" id="login_password" ></div>
+                    <div id='row'><p>password:</p> <input type="password" name="login_password" id="login_password" ></div>
+                    <input type="checkbox" onclick="Show_Password()">Show Password
                     <input type="submit" value="login" name="submit_b">
                     <input type="submit" value="regester" name="submit_b">
                     <input type="submit" value="forget password" name="submit_b">

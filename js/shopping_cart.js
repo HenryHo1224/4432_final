@@ -38,7 +38,7 @@ window.onload = function() {
       }else {
         document.getElementById("login_area").innerHTML=`<a href=user_interface.html id="login">${getCookie("user")}</a>`;
       }
-      document.getElementById('total_money').innerHTML = total_money ;
+      document.getElementById('total_money').innerHTML = "total pay: \n$"+total_money ;
 
     console.log(cart_product)
     setCookie("shopping_cart",JSON.stringify(cart_product),300)

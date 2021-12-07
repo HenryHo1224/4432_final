@@ -8,7 +8,7 @@
 }
 
 table{
-    
+    width: 100%;
     border-spacing:0
 }
 
@@ -18,3 +18,15 @@ td{
     padding:0;
 }
 
+#by_nickname{
+    height: 3%;
+
+}
+
+#by_id{
+    height: 3%; 
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
